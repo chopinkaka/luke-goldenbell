@@ -1,5 +1,5 @@
-// 누가복음 골든벨 오프라인 캐시 (build ad971f579c)
-const CACHE = "lukegb-ad971f579c";
+// 누가복음 골든벨 오프라인 캐시 (build 717e4c1fe1)
+const CACHE = "lukegb-717e4c1fe1";
 const FONTS = "lukegb-fonts";
 const CORE = ["./", "./index.html", "./manifest.webmanifest", "./icons/icon-192.png", "./icons/icon-512.png", "./icons/icon-maskable-512.png", "./icons/apple-touch-icon.png"];
 
