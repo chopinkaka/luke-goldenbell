@@ -1,5 +1,5 @@
-// 누가복음 골든벨 오프라인 캐시 (build 1b287f47f2)
-const CACHE = "lukegb-1b287f47f2";
+// 누가복음 골든벨 오프라인 캐시 (build 3f6d4425c6)
+const CACHE = "lukegb-3f6d4425c6";
 const FONTS = "lukegb-fonts";
 const CORE = ["./", "./index.html", "./manifest.webmanifest", "./icons/icon-192.png", "./icons/icon-512.png", "./icons/icon-maskable-512.png", "./icons/apple-touch-icon.png"];
 
@@ -9,7 +9,7 @@ self.addEventListener("install", (e) => {
 self.addEventListener("activate", (e) => {
   e.waitUntil(
     caches.keys()
-      .then((keys) => Promise.all(keys.filter((k) => k !== CACHE && k !== FONTS).map((k) => caches.delete(k))))
+      .then((keys) => Promise.all(keys.filter((k) => /^lukegb-[a-f0-9]{10}$/.test(k) && k !== CACHE).map((k) => caches.delete(k))))
       .then(() => self.clients.claim())
   );
 });
